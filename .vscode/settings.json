@@ -7,9 +7,9 @@
 	// automatically fix stylelint violations on save with the editor extension
 	// automatically fix markdownlint violations on save with the editor extension
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true,
-		"source.fixAll.stylelint": true,
-		"source.fixAll.markdownlint": true
+		"source.fixAll.eslint": "explicit",
+		"source.fixAll.stylelint": "explicit",
+		"source.fixAll.markdownlint": "explicit"
 	},
 	// always show eslint in the statusbar
 	"eslint.alwaysShowStatus": true,
