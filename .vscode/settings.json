@@ -16,5 +16,7 @@
 	// set the default formatter for HTML instead of Prettier
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features"
-	}
+	},
+	"files.autoSave": "onWindowChange",
+	"workbench.startupEditor": "none"
 }
