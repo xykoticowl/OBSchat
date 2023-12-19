@@ -11,6 +11,7 @@ body {
 
 /* Style the entire list of messages */
 [data-twitch-chat] {
+	font-family: monospace;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -28,16 +29,29 @@ body {
 	/* Message item styles here */
 }
 
+[data-twitch-sender-role~='mod'] .twitch-chat-sender::before {
+	content: '⚔';
+	color: var(--accent-color);
+}
+
+[data-twitch-sender-roles~='broadcaster'] .twitch-chat-sender::before {
+	content: '🎦';
+}
+
 /* Style snippet of replied-to messages */
 [data-twitch-message-reply] {
 	display: block;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+	color: grey;
 }
 
 /* Style the sender's username in each message item */
 .twitch-chat-sender {
+	font-family: 'Courier New', sans-serif;
+	color: var(--twitch-sender-color, white);
+
 	/* Username styles here */
 }
 
@@ -53,9 +67,14 @@ body {
 	width: 1.2em;
 }
 
+/* change personal emote
+[data-twitch-emote^='xykoti' i] {
+	width: 5rem;
+} */
+
 /* Style @-mentions */
 [data-twitch-mentioned-user] {
 	background: none;
-	color: inherit;
+	color: var(--twitch-sender-color, white);
 	font-weight: bold;
 }
